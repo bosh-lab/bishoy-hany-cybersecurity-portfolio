@@ -51,8 +51,6 @@ Designed and configured a multi-site branch network with dynamic routing protoco
   - RIP: Distance-vector, simple but slow convergence
   - EIGRP: Advanced distance-vector, fast convergence, Cisco proprietary
 
-## 📸 Screenshots
-*[Add screenshots here - see instructions below]*
 
 ## ✅ What I Learned
 - **OSPF:** Link-state routing, area design, LSDB synchronization, SPF algorithm
