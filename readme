@@ -1,0 +1,25 @@
+🔍 Splunk SIEM Log Analysis Projects
+A hands-on collection of 7 cybersecurity projects focused on analyzing different types of network logs using Splunk SIEM. Each project covers uploading log data, writing SPL queries, detecting anomalies, and monitoring traffic patterns.
+
+🛠️ Tools Used
+
+Splunk SIEM
+SPL (Splunk Processing Language)
+Zeek IDS (for Tunnel logs)
+Sample log datasets from secrepo.com
+
+
+📁 Projects
+#ProjectProtocolWhat I Analyzed1DNS Log AnalysisDNSQuery patterns, suspicious domains, anomalies2FTP Log AnalysisFTPFile transfer activity, failed logins, anomalies3HTTP Log AnalysisHTTPRequest patterns, error codes, suspicious traffic4SSH Log AnalysisSSHBrute force attempts, login activity, correlations5Tunnel Log AnalysisGRE/IPv4/IPv6Tunnel traffic detection, threat correlation6SMTP Log AnalysisSMTPEmail traffic patterns, spam detection, anomalies7DHCP Log AnalysisDHCPIP assignments, rogue devices, anomalies
+
+🎯 Skills Demonstrated
+
+Uploading and indexing log data into Splunk
+Writing SPL queries for search, filtering, and statistics
+Extracting relevant fields from raw log data
+Detecting anomalies and suspicious behavior
+Correlating logs across multiple data sources
+
+
+👤 Author
+Bishoy Hany — Aspiring SOC Analyst | Blue Team Enthusiast
