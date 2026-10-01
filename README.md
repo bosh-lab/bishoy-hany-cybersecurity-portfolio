@@ -9,7 +9,7 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 - 🎓 **Cybersecurity SOC Analyst Trainee** — IT Gate Academy (Cisco Networking Academy Partner)
 - 🌐 Based in Egypt
 - 💡 Passionate about Blue Team operations, SOC analysis, and network defense
-- 📚 Currently learning: Splunk SIEM, Incident Response, Firewall Administration
+- 📚 Currently learning: Splunk SIEM, Incident Response, Q-Radar, Firewall Administration
 
 ---
 
@@ -18,7 +18,7 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 | Category              | Skills                                                                              |
 | --------------------- | ----------------------------------------------------------------------------------- |
 | **Networking**        | Cisco Packet Tracer, OSPF, RIP, EIGRP, VLANs, Wireless Networks, Network Automation |
-| **SIEM & Monitoring** | Splunk (SPL), Basic Log Analysis                                                    |
+| **SIEM & Monitoring** | Splunk (SPL), Q-Radar, Basic Log Analysis                                           |
 | **Firewalls**         | FortiGate (NSE4), Firewall Policies, NAT, Security Profiles                         |
 | **Security Tools**    | Wireshark, Nmap                                                                     |
 | **Operating Systems** | Windows, Linux Administration (Level 1)                                             |
@@ -34,7 +34,8 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 | 2 | [**Branch Network Configuration**](./02-Data-Communication) | Configured OSPF, RIP, and EIGRP routing protocols | Cisco Packet Tracer |
 | 3 | [**Splunk: Exploring SPL**](./03-Splunk-Labs) | Learned SPL queries for log analysis and detection | Splunk, TryHackMe |
 | 4 | [**FortiGate Firewall & Security Profiles Lab**](./05-FortiGate-Firewall-Security-Lab/FortiGate-Firewall-Security-Lab) | Configured a LAN-to-WAN firewall policy with NAT, plus seven security profiles (AntiVirus, Web Filter, DNS Filter, Application Control, IPS, File Filter, SSL/SSH Inspection). Connectivity tested with ping; profiles configured and attached to the policy | FortiGate VM64 (FortiOS 7.6.7) |
-| 5 | **Network Traffic Analysis** | Analyzed network traffic patterns and protocols | TryHackMe |
+| 5 | [**QRadar Labs**](./04-QRadar-Labs) | Hands-on QRadar SIEM labs from the SOC Analyst program | IBM QRadar |
+| 6 | **Network Traffic Analysis** | Analyzed network traffic patterns and protocols | TryHackMe |
 
 ---
 
@@ -66,6 +67,7 @@ Based on the **Cyber Security (SOC Analyst) Engineering Program — NEW CONTENT*
 | ECIR (Enterprise Cyber Incident Response) | 40 hrs + Exam | ✅ Completed |
 | eCDFP (Digital Forensics Professional)    | 28 hrs + Exam | ✅ Completed |
 | Firewall Basics — NSE4                    | 24 hrs        | ✅ Completed |
+| Q-Radar (SIEM Solution)                   | 24 hrs        | ✅ Completed |
 | **Splunk SIEM**                           | 24 hrs        | ✅ Completed |
 
 ### 🎮 TryHackMe
@@ -85,4 +87,4 @@ Based on the **Cyber Security (SOC Analyst) Engineering Program — NEW CONTENT*
 
 ## 🌟 Let's Connect!
 
-I'm actively seeking opportunities in cybersecurity, particularly in **SOC Analyst** and **Network Security** roles. With hands-on training in Cisco networking, Splunk SIEM, FortiGate firewalls, and incident response, I'm ready to contribute to a security operations team. Feel free to reach out!
+I'm actively seeking opportunities in cybersecurity, particularly in **SOC Analyst** and **Network Security** roles. With hands-on training in Cisco networking, SIEM tools (Splunk, Q-Radar), FortiGate firewalls, and incident response, I'm ready to contribute to a security operations team. Feel free to reach out!
