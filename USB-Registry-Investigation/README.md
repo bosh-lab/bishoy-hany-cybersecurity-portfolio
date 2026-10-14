@@ -61,7 +61,7 @@ The reported registry review identified a Lexar USB mass-storage device and a re
 - `screenshots/README.md` — screenshot guidance
 
 ## LinkedIn demonstration
-**LinkedIn post URL:** Not added yet — insert the URL of the public LinkedIn video post here.
+**LinkedIn video post:** [Watch the investigation walkthrough](https://lnkd.in/p/eSnbiuBG)
 
 ## Safe publication
 Use only evidence you are authorized to examine. Redact usernames, hostnames, serial numbers, and other identifying information before publishing screenshots or exports.
