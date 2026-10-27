@@ -21,6 +21,7 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 | **SIEM & Monitoring** | Splunk (SPL), Q-Radar, Basic Log Analysis                                           |
 | **Firewalls**         | FortiGate (NSE4), Firewall Policies, NAT, Security Profiles                         |
 | **Security Tools**    | Wireshark, Nmap                                                                     |
+| **Digital Forensics** | Windows Registry Analysis (USBSTOR, MountedDevices, DeviceClasses), Registry Explorer |
 | **Operating Systems** | Windows, Linux Administration (Level 1)                                             |
 | **Platforms**         | TryHackMe, Cisco Networking Academy                                                 |
 
@@ -32,10 +33,11 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 | --- | --- | --- | --- |
 | 1 | [**Wireless Network Design**](./01-wireless-network-design) | Designed and configured a secure wireless network topology | Cisco Packet Tracer |
 | 2 | [**Branch Network Configuration**](./02-Data-Communication) | Configured OSPF, RIP, and EIGRP routing protocols | Cisco Packet Tracer |
-| 3 | [**Splunk: Exploring SPL**](./03-Splunk-Labs) | Learned SPL queries for log analysis and detection | Splunk, TryHackMe |
+| 3 | [**Splunk Log Analysis (7 labs)**](./03-Splunk-Labs/03-Splunk-Labs) | Analyzed DNS, FTP, HTTP, SSH, tunnel, SMTP, and DHCP logs using SPL for log analysis and detection | Splunk (SPL) |
 | 4 | [**FortiGate Firewall & Security Profiles Lab**](./05-FortiGate-Firewall-Security-Lab/FortiGate-Firewall-Security-Lab) | Configured a LAN-to-WAN firewall policy with NAT, plus seven security profiles (AntiVirus, Web Filter, DNS Filter, Application Control, IPS, File Filter, SSL/SSH Inspection). Connectivity tested with ping; profiles configured and attached to the policy | FortiGate VM64 (FortiOS 7.6.7) |
 | 5 | [**QRadar Labs**](./04-QRadar-Labs) | Hands-on QRadar SIEM labs from the SOC Analyst program | IBM QRadar |
 | 6 | **Network Traffic Analysis** | Analyzed network traffic patterns and protocols | TryHackMe |
+| 7 | [**USB Registry Investigation (Windows DFIR)**](./USB-Registry-Investigation/USB-Registry-Investigation) | Investigated USB device activity in the Windows SYSTEM registry hive, correlated it with a logon timeline, and documented findings, evidence limitations, and next steps | Registry Explorer |
 
 ---
 
