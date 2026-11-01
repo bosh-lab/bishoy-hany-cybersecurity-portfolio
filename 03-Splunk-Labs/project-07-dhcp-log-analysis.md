@@ -114,3 +114,7 @@ Feel free to customize these steps according to your specific use case and requi
 
 Feel free to customize these steps according to your specific use case and requirements. 
 
+
+
+## MITRE ATT&CK Relevance
+- **No specific ATT&CK technique is assigned from the current lab description.** DHCP logs provide network configuration and address-assignment context, but unusual leases or unknown client identifiers alone do not establish adversary activity. Correlate with switch, wireless, endpoint, and authentication logs before assigning a technique.
