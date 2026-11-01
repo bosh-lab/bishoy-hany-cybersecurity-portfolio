@@ -122,3 +122,7 @@ Happy analyzing!
 
 
 
+
+
+## MITRE ATT&CK Relevance
+- **No specific ATT&CK technique is assigned from the current lab description.** HTTP access logs can help investigate suspicious web requests, but unusual requests or error codes alone do not prove exploitation, command and control, or another ATT&CK behavior. Map a technique only when the request pattern and corroborating evidence support it.
