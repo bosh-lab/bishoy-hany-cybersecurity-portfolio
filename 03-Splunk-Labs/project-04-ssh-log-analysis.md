@@ -122,3 +122,8 @@ Happy analyzing!
 
 
 
+
+
+## MITRE ATT&CK Relevance
+- **Potential technique:** [T1110 – Brute Force](https://attack.mitre.org/techniques/T1110/).
+- **When it applies:** Repeated failed SSH authentication attempts may be consistent with brute-force activity. Confirm the pattern using source IPs, targeted accounts, attempt frequency, and any subsequent successful logins. Failed attempts alone do not prove account compromise.
