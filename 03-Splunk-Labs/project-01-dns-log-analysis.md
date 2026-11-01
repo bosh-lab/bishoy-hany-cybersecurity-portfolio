@@ -42,7 +42,7 @@ Before analyzing DNS logs in Splunk, ensure the following:
   
   ```spl
   index=<your_dns_index> sourcetype=<your_dns_sourcetype>
-
+  ```
 
 ## Steps to Analyze DNS Log Files in Splunk SIEM
 
