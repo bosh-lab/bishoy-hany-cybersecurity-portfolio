@@ -67,7 +67,7 @@ index=<your_tunnel_index> sourcetype=<your_tunnel_sourcetype>
 ### 3. Analyze Tunneling Protocols
 - Determine the distribution of observed tunnel protocols:
 ```
-index=<your_tunnel_index> sourcetype=<your_tunnel_sourcetype> tunnel_protocol=GRE
+index=<your_tunnel_index> sourcetype=<your_tunnel_sourcetype>
 | stats count by tunnel_protocol
 ```
 
