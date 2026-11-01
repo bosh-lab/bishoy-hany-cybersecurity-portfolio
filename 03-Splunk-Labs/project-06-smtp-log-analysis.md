@@ -112,3 +112,7 @@ Analyzing SMTP log files with Splunk SIEM enhances network security by monitorin
 
 Feel free to customize these steps according to your specific use case and requirements. 
 
+
+
+## MITRE ATT&CK Relevance
+- **No specific ATT&CK technique is assigned from the current lab description.** SMTP traffic analysis can support investigations into suspicious email activity, but sender/recipient patterns alone do not establish phishing or malicious attachment delivery. Map a technique such as phishing only when message content, headers, URLs, attachments, or related evidence support it.
