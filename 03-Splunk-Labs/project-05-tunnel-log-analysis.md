@@ -96,3 +96,8 @@ Happy analyzing!
 
 
 
+
+
+## MITRE ATT&CK Relevance
+- **Potential technique:** [T1572 – Protocol Tunneling](https://attack.mitre.org/techniques/T1572/).
+- **When it applies:** Use this mapping only when evidence indicates an adversary is encapsulating traffic to conceal communications or bypass network controls. The presence of GRE or other legitimate tunnel traffic by itself is not evidence of malicious tunneling.
