@@ -93,3 +93,8 @@ Happy analyzing!
 
 
 
+
+
+## MITRE ATT&CK Relevance
+- **Potential technique:** [T1071.004 – Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004/).
+- **When it applies:** If investigation identifies DNS being used for command-and-control communication. DNS query analysis alone does not prove C2 activity; validate suspicious domains, query patterns, endpoints, and supporting network or endpoint evidence.
