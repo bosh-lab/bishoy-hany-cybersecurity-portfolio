@@ -1,0 +1,6 @@
+// SIEM - Web Scanner Spike - Linux
+// MITRE: T1595 Active Scanning
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+index=linux sourcetype=access_combined status=404
+| stats count by clientip
+| where count >= 3

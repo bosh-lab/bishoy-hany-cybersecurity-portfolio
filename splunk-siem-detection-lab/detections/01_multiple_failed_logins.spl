@@ -1,0 +1,7 @@
+// SIEM - Multiple Failed Logins - Windows
+// MITRE: T1110 Brute Force
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+index=windows sourcetype="WinEventLog:Security" EventCode=4625
+| bucket _time span=5m
+| stats count by _time, host
+| where count >= 3

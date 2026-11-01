@@ -1,0 +1,6 @@
+// SIEM - Web Attack - SQLi/Traversal - Linux
+// MITRE: T1190 Exploit Public-Facing Application
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+index=linux sourcetype=access_combined
+| regex _raw="(?i)(union.+select|'\s*or\s*'1'\s*=\s*'1|%27|\.\./|%2e%2e|etc/passwd|<script|sqlmap|nikto)"
+| table _time clientip uri_path uri_query status

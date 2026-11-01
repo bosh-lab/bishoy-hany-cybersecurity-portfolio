@@ -1,0 +1,7 @@
+// SIEM - Brute Force Success - Windows
+// MITRE: T1110 Brute Force (High severity)
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+index=windows sourcetype="WinEventLog:Security" (EventCode=4625 OR EventCode=4624)
+| bucket _time span=10m
+| stats count(eval(EventCode=4625)) as failures, count(eval(EventCode=4624)) as successes by _time, host
+| where failures >= 3 AND successes >= 1

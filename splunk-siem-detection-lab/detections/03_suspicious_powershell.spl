@@ -1,0 +1,11 @@
+// SIEM - Suspicious PowerShell - Windows
+// MITRE: T1059.001 PowerShell
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
+| rex "<EventID>(?<EventCode>\d+)</EventID>"
+| rex "<Data Name='Image'>(?<Image>[^<]+)"
+| rex "<Data Name='CommandLine'>(?<CommandLine>[^<]+)"
+| rex "<Data Name='ParentImage'>(?<ParentImage>[^<]+)"
+| where EventCode=1
+| where match(CommandLine,"(?i)(-enc|-encodedcommand|downloadstring|invoke-expression|iex\s|certutil.*-urlcache|bitsadmin|mimikatz|whoami\s*/priv)")
+| table _time host Image ParentImage CommandLine

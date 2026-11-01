@@ -1,0 +1,6 @@
+// SIEM - Privilege Escalation - Windows
+// MITRE: T1136.001 Create Account, T1098 Account Manipulation
+// Alert settings: scheduled, cron */5 * * * *, last 15 minutes, trigger when number of results > 0, action: Add to Triggered Alerts
+// 4672 was removed from this rule: it fired constantly on background SYSTEM activity (noise).
+index=windows sourcetype="WinEventLog:Security" (EventCode=4720 OR EventCode=4728 OR EventCode=4732)
+| stats count by EventCode, host, Account_Name

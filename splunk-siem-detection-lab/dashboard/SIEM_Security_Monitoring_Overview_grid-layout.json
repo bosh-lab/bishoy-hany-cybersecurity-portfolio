@@ -1,0 +1,284 @@
+{
+  "visualizations": {
+    "viz_L1zDphSB": {
+      "type": "splunk.singlevalue",
+      "dataSources": {
+        "primary": "ds_nKt9scaW"
+      },
+      "title": "Total Threats Detected."
+    },
+    "viz_em7ZMPWh": {
+      "type": "splunk.singlevalue",
+      "dataSources": {
+        "primary": "ds_s5EzmCH9"
+      },
+      "title": "Failed Logons (24h)"
+    },
+    "viz_cmUkr76P": {
+      "type": "splunk.singlevalue",
+      "dataSources": {
+        "primary": "ds_ZUDPykGo"
+      },
+      "title": "Suspicious Web Scans (404s)"
+    },
+    "viz_eJ33dy6O": {
+      "type": "splunk.line",
+      "dataSources": {
+        "primary": "ds_oVA0WI2P"
+      },
+      "title": "Logon Activity Over Time"
+    },
+    "viz_pQnV9bfa": {
+      "type": "splunk.table",
+      "dataSources": {
+        "primary": "ds_UFa7qwvD"
+      },
+      "title": "Top 404 Scanners (Potential Attackers)"
+    },
+    "viz_B6QMqyLq": {
+      "type": "splunk.table",
+      "dataSources": {
+        "primary": "ds_fwWYFeBR"
+      },
+      "title": "Suspicious PowerShell Executions"
+    },
+    "viz_vPTczLcB": {
+      "type": "splunk.table",
+      "dataSources": {
+        "primary": "ds_WRyN1JYL"
+      },
+      "title": "Account & Privilege Changes"
+    },
+    "viz_a61k58ZI": {
+      "type": "splunk.table",
+      "dataSources": {
+        "primary": "ds_okjSgZ5V"
+      },
+      "title": "Detected Web Attack Payloads"
+    },
+    "viz_zFz7fHps": {
+      "type": "splunk.bar",
+      "dataSources": {
+        "primary": "ds_DmcIej99"
+      },
+      "title": "Log Source Health"
+    }
+  },
+  "dataSources": {
+    "ds_nKt9scaW": {
+      "type": "ds.search",
+      "options": {
+        "query": "| rest /services/alerts/fired_alerts\r\n| stats sum(triggered_alert_count) as \"Alerts Triggered\""
+      },
+      "name": "Alerts_Count"
+    },
+    "ds_s5EzmCH9": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=windows sourcetype=\"WinEventLog:Security\" EventCode=4625 | stats count"
+      },
+      "name": "Failed_Logons"
+    },
+    "ds_ZUDPykGo": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=linux sourcetype=access_combined status=404 | stats count"
+      },
+      "name": "Web_Scans"
+    },
+    "ds_oVA0WI2P": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=windows sourcetype=\"WinEventLog:Security\" (EventCode=4624 OR EventCode=4625)\r\n| eval status=if(EventCode=4624,\"Success\",\"Failure\")\r\n| timechart span=15m count by status"
+      },
+      "name": "Logon_Activity"
+    },
+    "ds_UFa7qwvD": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=linux sourcetype=access_combined status=404\r\n| stats count by clientip\r\n| sort - count"
+      },
+      "name": "Top_Scanners"
+    },
+    "ds_fwWYFeBR": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=windows sourcetype=\"XmlWinEventLog:Microsoft-Windows-Sysmon/Operational\"\r\n| rex \"<EventID>(?<EventCode>\\d+)</EventID>\"\r\n| rex \"<Data Name='Image'>(?<Image>[^<]+)\"\r\n| rex \"<Data Name='CommandLine'>(?<CommandLine>[^<]+)\"\r\n| rex \"<Data Name='ParentImage'>(?<ParentImage>[^<]+)\"\r\n| where EventCode=1\r\n| where match(CommandLine,\"(?i)(-enc|-encodedcommand|downloadstring|invoke-expression|iex\\s|certutil.*-urlcache|bitsadmin|mimikatz|whoami\\s*/priv)\")\r\n| table _time host Image ParentImage CommandLine"
+      },
+      "name": "Suspicious_Processes"
+    },
+    "ds_WRyN1JYL": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=windows sourcetype=\"WinEventLog:Security\" (EventCode=4720 OR EventCode=4728 OR EventCode=4732)\r\n| table _time host EventCode Account_Name"
+      },
+      "name": "Privilege_Changes"
+    },
+    "ds_okjSgZ5V": {
+      "type": "ds.search",
+      "options": {
+        "query": "index=linux sourcetype=access_combined\r\n| regex _raw=\"(?i)(union.+select|'\\s*or\\s*'1'\\s*=\\s*'1|%27|\\.\\./|%2e%2e|etc/passwd|<script|sqlmap|nikto)\"\r\n| table _time clientip uri_path uri_query status"
+      },
+      "name": "Web_Attacks"
+    },
+    "ds_DmcIej99": {
+      "type": "ds.search",
+      "options": {
+        "query": "| tstats count where index=windows OR index=linux by sourcetype"
+      },
+      "name": "Log_Health"
+    }
+  },
+  "defaults": {
+    "dataSources": {
+      "ds.search": {
+        "options": {
+          "queryParameters": {
+            "latest": "$global_time.latest$",
+            "earliest": "$global_time.earliest$"
+          }
+        }
+      },
+      "ds.spl2": {
+        "options": {
+          "queryParameters": {
+            "latest": "$global_time.latest$",
+            "earliest": "$global_time.earliest$"
+          }
+        }
+      }
+    },
+    "visualizations": {
+      "global": {
+        "showProgressBar": true
+      }
+    }
+  },
+  "inputs": {
+    "input_global_trp": {
+      "type": "input.timerange",
+      "options": {
+        "token": "global_time",
+        "defaultValue": "-24h@h,now"
+      },
+      "title": "Global Time Range"
+    }
+  },
+  "layout": {
+    "options": {},
+    "globalInputs": [
+      "input_global_trp"
+    ],
+    "tabs": {
+      "items": [
+        {
+          "layoutId": "layout_1",
+          "label": "Overview"
+        }
+      ]
+    },
+    "layoutDefinitions": {
+      "layout_1": {
+        "type": "grid",
+        "structure": [
+          {
+            "item": "viz_L1zDphSB",
+            "type": "block",
+            "position": {
+              "x": 0,
+              "y": 0,
+              "w": 480,
+              "h": 200
+            }
+          },
+          {
+            "item": "viz_em7ZMPWh",
+            "type": "block",
+            "position": {
+              "x": 480,
+              "y": 0,
+              "w": 480,
+              "h": 200
+            }
+          },
+          {
+            "item": "viz_cmUkr76P",
+            "type": "block",
+            "position": {
+              "x": 960,
+              "y": 0,
+              "w": 480,
+              "h": 200
+            }
+          },
+          {
+            "item": "viz_eJ33dy6O",
+            "type": "block",
+            "position": {
+              "x": 0,
+              "y": 200,
+              "w": 960,
+              "h": 360
+            }
+          },
+          {
+            "item": "viz_pQnV9bfa",
+            "type": "block",
+            "position": {
+              "x": 960,
+              "y": 200,
+              "w": 480,
+              "h": 360
+            }
+          },
+          {
+            "item": "viz_B6QMqyLq",
+            "type": "block",
+            "position": {
+              "x": 0,
+              "y": 560,
+              "w": 720,
+              "h": 360
+            }
+          },
+          {
+            "item": "viz_vPTczLcB",
+            "type": "block",
+            "position": {
+              "x": 720,
+              "y": 560,
+              "w": 720,
+              "h": 360
+            }
+          },
+          {
+            "item": "viz_a61k58ZI",
+            "type": "block",
+            "position": {
+              "x": 0,
+              "y": 920,
+              "w": 720,
+              "h": 360
+            }
+          },
+          {
+            "item": "viz_zFz7fHps",
+            "type": "block",
+            "position": {
+              "x": 720,
+              "y": 920,
+              "w": 720,
+              "h": 360
+            }
+          }
+        ],
+        "options": {
+          "width": 1440,
+          "height": 1280
+        }
+      }
+    }
+  },
+  "description": "",
+  "title": "SIEM Security Monitoring Overview"
+}
