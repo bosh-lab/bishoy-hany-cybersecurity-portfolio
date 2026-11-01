@@ -99,3 +99,7 @@ Happy analyzing!
 
 
 
+
+
+## MITRE ATT&CK Relevance
+- **No specific ATT&CK technique is assigned from the current lab description.** FTP file-transfer monitoring can support an investigation, but file transfers alone do not establish data exfiltration or another adversary technique. A mapping should be added only if the evidence demonstrates a specific behavior, such as unauthorized exfiltration.
