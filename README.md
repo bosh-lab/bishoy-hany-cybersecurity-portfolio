@@ -1,92 +1,77 @@
-# 🔐 Bishoy Hany - Cybersecurity Portfolio
+# 🔐 Bishoy Hany: Cybersecurity Portfolio
 
-Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst with hands-on experience in network security, SIEM analysis, firewall administration, and infrastructure design. This repository showcases my practical projects and continuous learning journey.
+Aspiring SOC analyst based in Cairo, Egypt, building practical blue-team skills through hands-on work in SIEM detection, digital forensics, firewall administration, and network security. This repository documents my labs, investigations, and technical learning.
 
----
+**At a glance**
 
-## 🎯 About Me
-
-- 🎓 **Cybersecurity SOC Analyst Trainee** — IT Gate Academy (Cisco Networking Academy Partner)
-- 🌐 Based in Egypt
-- 💡 Passionate about Blue Team operations, SOC analysis, and network defense
-- 📚 Currently learning: Splunk SIEM, Incident Response, Q-Radar, Firewall Administration
+- Built a Splunk SIEM detection lab with six MITRE ATT&CK-mapped alerts, each validated by simulating the corresponding attack.
+- Investigated USB device activity through Windows Registry artifacts and documented an evidence-based forensic timeline.
+- Configured a FortiGate firewall lab with NAT and security profiles.
 
 ---
 
 ## 🛠️ Technical Skills
 
-| Category              | Skills                                                                              |
-| --------------------- | ----------------------------------------------------------------------------------- |
-| **Networking**        | Cisco Packet Tracer, OSPF, RIP, EIGRP, VLANs, Wireless Networks, Network Automation |
-| **SIEM & Monitoring** | Splunk (SPL), IBM QRadar, Windows Event Log Analysis, Sysmon, Detection Engineering, Alert Tuning |
-| **Firewalls**         | FortiGate (NSE4), Firewall Policies, NAT, Security Profiles                         |
-| **Security Tools**    | Wireshark, Nmap                                                                     |
-| **Digital Forensics** | Windows Registry Analysis (USBSTOR, MountedDevices, DeviceClasses), Registry Explorer |
-| **Operating Systems** | Windows, Linux Administration (Level 1)                                             |
-| **Platforms**         | TryHackMe, Cisco Networking Academy                                                 |
+| Category | Skills |
+| --- | --- |
+| **SIEM & Detection** | Splunk (SPL), IBM QRadar, Sysmon, Windows Event Log analysis, detection engineering, alert tuning, MITRE ATT&CK mapping |
+| **Incident Response & DFIR** | Windows Registry analysis (USBSTOR, MountedDevices, DeviceClasses), Registry Explorer, forensic timelines, investigation reporting |
+| **Firewalls** | FortiGate, firewall policies, NAT, security profiles |
+| **Networking** | Cisco Packet Tracer, OSPF, RIP, EIGRP, VLANs, wireless networks, network automation |
+| **Security Tools** | Wireshark, Nmap |
+| **Operating Systems** | Windows, Linux Administration (Level 1) |
+| **Platforms** | TryHackMe, Cisco Networking Academy |
 
 ---
 
-## 📂 Projects
+## 📂 Security Operations Projects
 
 | # | Project | Description | Tools |
 | --- | --- | --- | --- |
-| 1 | [**Splunk SIEM Detection Lab**](./splunk-siem-detection-lab) | Built a home-lab SIEM ingesting Windows, Sysmon, Linux, and Apache logs; wrote six ATT&CK-mapped alerts, validated each by simulating the attack, and built a SOC-style dashboard | Splunk Enterprise, Sysmon, Universal Forwarder |
-| 2 | [**Wireless Network Design**](./01-wireless-network-design) | Designed and configured a secure wireless network topology | Cisco Packet Tracer |
-| 3 | [**Branch Network Configuration**](./02-Data-Communication) | Configured OSPF, RIP, and EIGRP routing protocols | Cisco Packet Tracer |
-| 4 | [**Splunk Log Analysis (7 labs)**](./03-Splunk-Labs) | Analyzed DNS, FTP, HTTP, SSH, tunnel, SMTP, and DHCP logs using SPL for log analysis and detection | Splunk (SPL) |
-| 5 | [**FortiGate Firewall & Security Profiles Lab**](./05-FortiGate-Firewall-Security-Lab) | Configured a LAN-to-WAN firewall policy with NAT, plus seven security profiles (AntiVirus, Web Filter, DNS Filter, Application Control, IPS, File Filter, SSL/SSH Inspection). Connectivity tested with ping; profiles configured and attached to the policy | FortiGate VM64 (FortiOS 7.6.7) |
-| 6 | [**QRadar Labs**](./04-QRadar-Labs) | Hands-on QRadar SIEM labs from the SOC Analyst program | IBM QRadar |
-| 7 | [**USB Registry Investigation (Windows DFIR)**](./USB-Registry-Investigation) | Investigated USB device activity in the Windows SYSTEM registry hive, correlated it with a logon timeline, and documented findings, evidence limitations, and next steps | Registry Explorer |
+| 1 | [**Splunk SIEM Detection Lab**](./splunk-siem-detection-lab) | Home-lab SIEM ingesting Windows, Sysmon, Linux, and Apache logs; six MITRE ATT&CK-mapped alerts, each validated by simulating the attack; SOC-style dashboard | Splunk Enterprise, Sysmon, Universal Forwarder |
+| 2 | [**USB Registry Investigation (Windows DFIR)**](./USB-Registry-Investigation) | Analyzed USB device activity in the Windows SYSTEM registry hive, correlated evidence with a logon timeline, and documented findings, evidence limitations, and next steps | Registry Explorer |
+| 3 | [**FortiGate Firewall & Security Profiles Lab**](./05-FortiGate-Firewall-Security-Lab) | Configured a LAN-to-WAN firewall policy with NAT and security profiles (AntiVirus, Web Filter, DNS Filter, Application Control, IPS, File Filter, SSL/SSH Inspection); connectivity tested with ping | FortiGate VM64 (FortiOS 7.6.7) |
+| 4 | [**Splunk Log Analysis (7 labs)**](./03-Splunk-Labs) | Analyzed DNS, FTP, HTTP, SSH, tunnel, SMTP, and DHCP logs using SPL | Splunk (SPL) |
+| 5 | [**IBM QRadar Labs**](./04-QRadar-Labs) | Hands-on QRadar SIEM labs from the SOC Analyst program | IBM QRadar |
+
+## 🌐 Networking Foundations
+
+| # | Project | Description | Tools |
+| --- | --- | --- | --- |
+| 6 | [**Wireless Network Design**](./01-wireless-network-design) | Designed and configured a secure wireless network topology | Cisco Packet Tracer |
+| 7 | [**Branch Network Configuration**](./02-Data-Communication) | Configured OSPF, RIP, and EIGRP routing protocols | Cisco Packet Tracer |
 
 ---
 
-## 🏆 Certifications & Training
+## 🏆 Training & Course Exam Results
 
-### ✅ Completed Certifications
+The following scores are results from course exams completed through IT Gate Academy's **Cyber Security (SOC Analyst) Engineering Program**. They are presented as training results, not as claims of independently issued vendor certifications.
 
-| Certificate                                               | Provider                                   | Date         | Score            |
-| --------------------------------------------------------- | ------------------------------------------ | ------------ | ---------------- |
-| **CCNA: Introduction to Networks**                        | Cisco Networking Academy (IT Gate Academy) | Sep 9, 2025  | —                |
-| **CCNA: Switching, Routing, and Wireless Essentials**     | Cisco Networking Academy (IT Gate Academy) | Sep 9, 2025  | —                |
-| **CCNA: Enterprise Networking, Security, and Automation** | Cisco Networking Academy (IT Gate Academy) | Dec 14, 2025 | —                |
-| **CEH (SOC Online G4 2025)**                              | IT Gate Academy                            | Dec 25, 2025 | **45/50 — Pass** |
-| **CSA (Certified SOC Analyst)**                           | IT Gate Academy                            | Feb 25, 2026 | **34/35 — Pass** |
-| **ECIR (Certified Incident Responder)**                   | IT Gate Academy                            | May 2026     | **49/50 — Pass** |
-| **eCDFP (Digital Forensics Professional)**                | IT Gate Academy                            | Jul 2026     | **49/50 — Pass** |
+| Course / Exam | Provider | Date | Result |
+| --- | --- | --- | --- |
+| **CCNA: Introduction to Networks** | Cisco Networking Academy (IT Gate Academy) | Sep 9, 2025 | Completed |
+| **CCNA: Switching, Routing, and Wireless Essentials** | Cisco Networking Academy (IT Gate Academy) | Sep 9, 2025 | Completed |
+| **CCNA: Enterprise Networking, Security, and Automation** | Cisco Networking Academy (IT Gate Academy) | Dec 14, 2025 | Completed |
+| **CEH (SOC Online G4 2025) course exam** | IT Gate Academy | Dec 25, 2025 | **45/50 — Pass** |
+| **CSA (Certified SOC Analyst) course exam** | IT Gate Academy | Feb 25, 2026 | **34/35 — Pass** |
+| **ECIR (Certified Incident Responder) course exam** | IT Gate Academy | May 2026 | **49/50 — Pass** |
+| **eCDFP (Digital Forensics Professional) course exam** | IT Gate Academy | Jul 2026 | **49/50 — Pass** |
 
-### 📚 Completed Course Content
+**Other completed course content:** CCNA Fast Track (40 hrs), MCSA Fast Track (40 hrs), Linux Administration Level 1 (32 hrs), Firewall Basics / NSE 4 (24 hrs), QRadar (24 hrs), Splunk SIEM (24 hrs).
 
-Based on the **Cyber Security (SOC Analyst) Engineering Program — NEW CONTENT** curriculum:
-
-| Course                                    | Duration      | Status      |
-| ----------------------------------------- | ------------- | ----------- |
-| CCNA Fast Track                           | 40 hrs        | ✅ Completed |
-| MCSA Fast Track                           | 40 hrs        | ✅ Completed |
-| Linux Administration Level 1              | 32 hrs        | ✅ Completed |
-| CEH (Certified Ethical Hacker)            | 48 hrs + Exam | ✅ Completed |
-| **CSA (Certified SOC Analyst)**           | 32 hrs + Exam | ✅ Completed |
-| ECIR (Enterprise Cyber Incident Response) | 40 hrs + Exam | ✅ Completed |
-| eCDFP (Digital Forensics Professional)    | 28 hrs + Exam | ✅ Completed |
-| Firewall Basics — NSE4                    | 24 hrs        | ✅ Completed |
-| Q-Radar (SIEM Solution)                   | 24 hrs        | ✅ Completed |
-| **Splunk SIEM**                           | 24 hrs        | ✅ Completed |
+**Fortinet NSE 4:** Course content completed; certification exam in progress.
 
 ### 🎮 TryHackMe
 
-- ✅ **Network Traffic Basics** room completed
-- ✅ **Splunk: Exploring SPL** room completed
+- Network Traffic Basics — completed
+- Splunk: Exploring SPL — completed
 
 ---
 
-## 📫 Contact Me
+## 📫 Contact
 
-- 💼 **LinkedIn:** [linkedin.com/in/bishoy-hany-519baa373](https://www.linkedin.com/in/bishoy-hany-519baa373/)
-- 🎮 **TryHackMe:** [tryhackme.com/p/hanybishoy440](https://tryhackme.com/p/hanybishoy440)
-- 📧 **Email:** <hanybishoy440@gmail.com>
+- **LinkedIn:** [linkedin.com/in/bishoy-hany-519baa373](https://www.linkedin.com/in/bishoy-hany-519baa373/)
+- **TryHackMe:** [tryhackme.com/p/hanybishoy440](https://tryhackme.com/p/hanybishoy440)
+- **Email:** [hanybishoy440@gmail.com](mailto:hanybishoy440@gmail.com)
 
----
-
-## 🌟 Let's Connect!
-
-I'm actively seeking opportunities in cybersecurity, particularly in **SOC Analyst** and **Network Security** roles. With hands-on training in Cisco networking, SIEM tools (Splunk, Q-Radar), FortiGate firewalls, and incident response, I'm ready to contribute to a security operations team. Feel free to reach out!
+I'm actively seeking **SOC Analyst (Tier 1)** and **security monitoring** opportunities.
