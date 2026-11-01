@@ -36,7 +36,8 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 | 3 | [**Splunk Log Analysis (7 labs)**](./03-Splunk-Labs) | Analyzed DNS, FTP, HTTP, SSH, tunnel, SMTP, and DHCP logs using SPL for log analysis and detection | Splunk (SPL) |
 | 4 | [**FortiGate Firewall & Security Profiles Lab**](./05-FortiGate-Firewall-Security-Lab) | Configured a LAN-to-WAN firewall policy with NAT, plus seven security profiles (AntiVirus, Web Filter, DNS Filter, Application Control, IPS, File Filter, SSL/SSH Inspection). Connectivity tested with ping; profiles configured and attached to the policy | FortiGate VM64 (FortiOS 7.6.7) |
 | 5 | [**QRadar Labs**](./04-QRadar-Labs) | Hands-on QRadar SIEM labs from the SOC Analyst program | IBM QRadar |
-| 7 | [**USB Registry Investigation (Windows DFIR)**](./USB-Registry-Investigation) | Investigated USB device activity in the Windows SYSTEM registry hive, correlated it with a logon timeline, and documented findings, evidence limitations, and next steps | Registry Explorer |
+| 6 | [**USB Registry Investigation (Windows DFIR)**](./USB-Registry-Investigation) | Investigated USB device activity in the Windows SYSTEM registry hive, correlated it with a logon timeline, and documented findings, evidence limitations, and next steps | Registry Explorer |
+| 8 | [**Splunk SIEM Detection Lab**](./splunk-siem-detection-lab) | Built a home-lab SIEM ingesting Windows, Sysmon, Linux, and Apache logs; wrote six ATT&CK-mapped alerts, validated each by simulating the attack, and built a SOC-style dashboard | Splunk Enterprise, Sysmon, Universal Forwarder |
 
 ---
 
