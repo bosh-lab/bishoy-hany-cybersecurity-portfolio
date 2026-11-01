@@ -31,8 +31,6 @@ Welcome to my cybersecurity portfolio! I am an aspiring cybersecurity analyst wi
 
 | # | Project | Description | Tools |
 | --- | --- | --- | --- |
-| # | Project | Description | Tools |
-| --- | --- | --- | --- |
 | 1 | [**Splunk SIEM Detection Lab**](./splunk-siem-detection-lab) | Built a home-lab SIEM ingesting Windows, Sysmon, Linux, and Apache logs; wrote six ATT&CK-mapped alerts, validated each by simulating the attack, and built a SOC-style dashboard | Splunk Enterprise, Sysmon, Universal Forwarder |
 | 2 | [**Wireless Network Design**](./01-wireless-network-design) | Designed and configured a secure wireless network topology | Cisco Packet Tracer |
 | 3 | [**Branch Network Configuration**](./02-Data-Communication) | Configured OSPF, RIP, and EIGRP routing protocols | Cisco Packet Tracer |
