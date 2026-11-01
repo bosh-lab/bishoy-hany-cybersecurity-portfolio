@@ -65,7 +65,7 @@ index=<your_tunnel_index> sourcetype=<your_tunnel_sourcetype>
 ```
 
 ### 3. Analyze Tunneling Protocols
-- Determine the distribution of SSH commands executed:
+- Determine the distribution of observed tunnel protocols:
 ```
 index=<your_tunnel_index> sourcetype=<your_tunnel_sourcetype> tunnel_protocol=GRE
 | stats count by tunnel_protocol
