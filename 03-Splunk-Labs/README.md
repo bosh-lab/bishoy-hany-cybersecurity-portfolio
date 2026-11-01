@@ -16,13 +16,13 @@ A hands-on collection of 7 cybersecurity projects focused on analyzing different
 
 | # | Project | Protocol | What I Analyzed |
 |---|---------|----------|-----------------|
-| 1 | [DNS Log Analysis](./Project%231-analyzing-dns-log-using%20splunk-siem.md) | DNS | Query patterns, suspicious domains, anomalies |
-| 2 | [FTP Log Analysis](./project%232-analyzing-ftp-logs-using-splunk-siem.md) | FTP | File transfer activity, failed logins, anomalies |
-| 3 | [HTTP Log Analysis](./project%233-analyzing-http-logs-using-splunk-siem.md) | HTTP | Request patterns, error codes, suspicious traffic |
-| 4 | [SSH Log Analysis](./project%234-analyzing-ssh-logs-using-splunk-siem.md) | SSH | Brute force attempts, login activity, correlations |
-| 5 | [Tunnel Log Analysis](./project%235-analyzing-tunnel-logs-using-splunk-siem.md) | GRE/IPv4/IPv6 | Tunnel traffic detection, threat correlation |
-| 6 | [SMTP Log Analysis](./project%236-analyzing-smtp-logs-using-splunk-siem.md) | SMTP | Email traffic patterns, spam detection, anomalies |
-| 7 | [DHCP Log Analysis](./project%237-analyzing-dhcp-logs-using-splunk-siem.md) | DHCP | IP assignments, rogue devices, anomalies |
+| 1 | [DNS Log Analysis](./project-01-dns-log-analysis.md) | DNS | Query patterns, suspicious domains, anomalies |
+| 2 | [FTP Log Analysis](./project-02-ftp-log-analysis.md) | FTP | File transfer activity, failed logins, anomalies |
+| 3 | [HTTP Log Analysis](./project-03-http-log-analysis.md) | HTTP | Request patterns, error codes, suspicious traffic |
+| 4 | [SSH Log Analysis](./project-04-ssh-log-analysis.md) | SSH | Brute force attempts, login activity, correlations |
+| 5 | [Tunnel Log Analysis](./project-05-tunnel-log-analysis.md) | GRE/IPv4/IPv6 | Tunnel traffic detection, threat correlation |
+| 6 | [SMTP Log Analysis](./project-06-smtp-log-analysis.md) | SMTP | Email traffic patterns, spam detection, anomalies |
+| 7 | [DHCP Log Analysis](./project-07-dhcp-log-analysis.md) | DHCP | IP assignments, rogue devices, anomalies |
 
 ---
 
